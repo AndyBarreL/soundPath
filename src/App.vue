@@ -1,17 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CContainer fluid class="fh">
+    <CRow class="fh">
+      <CCol lg="3" class="bg-dark py-3">
+        <SideBarWrapper />
+      </CCol>
+      <CCol md="9" class="bg-light py-3">
+        123
+      </CCol>
+    </CRow>
+  </CContainer>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import SideBarWrapper from './components/sidebar/SidebarWrapper.vue';
 </script>
 
 <style>
@@ -21,6 +22,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
+  height: 100vh;
+}
+
+.fh {
+  height: 100%;
 }
 </style>
