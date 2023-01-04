@@ -11,8 +11,13 @@
   </CContainer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import SideBarWrapper from './components/sidebar/SidebarWrapper.vue';
+import { useMatchState } from './views/matches/matches.state';
+
+const { getMatches } = useMatchState();
+
+getMatches(197753714);
 </script>
 
 <style>
